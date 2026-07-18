@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es2025",
         "rootDir": "./",
-        "outDir": "./dist/js/",
+        "outDir": "docs/js",
         "noEmitOnError": true,
         "removeComments": true
     },
