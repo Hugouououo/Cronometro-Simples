@@ -25,11 +25,11 @@ playButton.addEventListener("click", function startCronometro() {
             let horas = Math.floor((tempoPassado / (1000 * 60 * 60)));
             if (horas >= 1) {
                 cronometro.innerHTML = `${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
-                document.title = `miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                document.title = `Miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
             }
             else {
                 cronometro.innerHTML = `${pad(minutos, 2)}:${pad(segundos, 2)}`;
-                document.title = `miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                document.title = `Miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`;
             }
         }, 100);
     }
@@ -47,7 +47,7 @@ resetButton.addEventListener("click", function resetCronometro() {
     tempoInicial = tempoAcumulado = 0;
     cronometro.innerHTML = `${pad(0, 2)}:${pad(0, 2)}`;
     cronometro.style.opacity = 0.5;
-    document.title = "miniwatch";
+    document.title = "Miniwatch";
     playButton.innerHTML = textoIniciar;
     resetButton.setAttribute('hidden', 'hidden');
 });

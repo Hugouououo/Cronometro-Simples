@@ -38,12 +38,12 @@ playButton.addEventListener("click", function startCronometro() {
 
             if (horas >= 1) {
                 cronometro.innerHTML = `${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
-                //titulo.innerHTML = `miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`
-                document.title = `miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                //titulo.innerHTML = `Miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`
+                document.title = `Miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
             } else {
                 cronometro.innerHTML = `${pad(minutos, 2)}:${pad(segundos, 2)}`;
-                //titulo.innerHTML = `miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`
-                document.title = `miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                //titulo.innerHTML = `Miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`
+                document.title = `Miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`;
             }
         }, 100); // 100ms
 
@@ -69,7 +69,7 @@ resetButton.addEventListener("click", function resetCronometro(){
     cronometro.style.opacity = 0.5
 
     //voltando o titulo ao normal
-    document.title = "miniwatch";
+    document.title = "Miniwatch";
 
     // volta os bototes ao inicial
     playButton.innerHTML = textoIniciar
