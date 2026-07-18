@@ -11,3 +11,4 @@
 - [ ] Sons dos botões
 	- [ ] Botão para desativar os sons
 - [ ] Guardar preferências no `localStorage`
+- [X] Atualizar o título da página dinâmicamente
