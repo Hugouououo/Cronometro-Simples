@@ -1,9 +1,11 @@
 let cronometro: any = document.querySelector(".cronometro")! 
 let ligado: boolean = false
 
-let playButton = document.querySelector("#play")!
-let resetButton = document.querySelector("#reset")!
-let temaButton = document.querySelector("#alternar-tema")!
+let playButton = document.querySelector("#play") as HTMLElement
+let resetButton = document.querySelector("#reset") as HTMLElement
+let temaButton = document.querySelector("#alternar-tema") as HTMLElement
+
+//let titulo = document.querySelector('#titulo') as HTMLElement
 
 const textoIniciar = `<img src="img/play.png" alt=""> <br>Iniciar`
 const textoPausar = `<img src="img/pause.png" alt=""> <br>Pausar`
@@ -36,8 +38,12 @@ playButton.addEventListener("click", function startCronometro() {
 
             if (horas >= 1) {
                 cronometro.innerHTML = `${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                //titulo.innerHTML = `miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`
+                document.title = `miniwatch: ${pad(horas, 2)}:${pad(minutos, 2)}:${pad(segundos, 2)}`;
             } else {
                 cronometro.innerHTML = `${pad(minutos, 2)}:${pad(segundos, 2)}`;
+                //titulo.innerHTML = `miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`
+                document.title = `miniwatch: ${pad(minutos, 2)}:${pad(segundos, 2)}`;
             }
         }, 100); // 100ms
 
@@ -61,6 +67,9 @@ resetButton.addEventListener("click", function resetCronometro(){
     tempoInicial = tempoAcumulado = 0
     cronometro.innerHTML = `${pad(0, 2)}:${pad(0, 2)}`
     cronometro.style.opacity = 0.5
+
+    //voltando o titulo ao normal
+    document.title = "miniwatch";
 
     // volta os bototes ao inicial
     playButton.innerHTML = textoIniciar
